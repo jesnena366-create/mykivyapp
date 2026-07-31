@@ -1,5 +1,5 @@
 [app]
-title = My Kivy App
+title = Network Probe
 package.name = mykivyapp
 package.domain = org.example
 source.dir = .
@@ -13,10 +13,11 @@ fullscreen = 0
 
 [buildozer]
 log_level = 2
-warn_on_root = 1
+warn_on_root = 0
 
 [app:android]
 api = 33
 minapi = 21
-archs = arm64-v8a, armeabi-v7a
+android.archs = arm64-v8a, armeabi-v7a
 android.accept_sdk_license = True
+android.permissions = INTERNET, ACCESS_NETWORK_STATE
