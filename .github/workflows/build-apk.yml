@@ -12,12 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Accept SDK licenses
-        run: |
-          SDKMANAGER=$(find /opt /usr -name sdkmanager -type f 2>/dev/null | head -1)
-          echo "using $SDKMANAGER"
-          yes | "$SDKMANAGER" --licenses || true
-
       - name: Build debug APK
         run: buildozer -v android debug
 
