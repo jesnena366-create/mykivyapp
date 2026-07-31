@@ -12,6 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Accept SDK licenses
+        run: yes | buildozer android accept-sdk-licenses
+
       - name: Build debug APK
         run: buildozer -v android debug
 
